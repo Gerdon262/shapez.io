@@ -11,6 +11,8 @@ export const enumItemProcessorTypes = {
     cutterQuad: "cutterQuad",
     rotater: "rotater",
     rotaterCCW: "rotaterCCW",
+    flipper: "flipper",
+    flipperHorizontal: "flipperHorizontal",
     stacker: "stacker",
     trash: "trash",
     mixer: "mixer",

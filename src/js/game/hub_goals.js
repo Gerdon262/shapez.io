@@ -413,6 +413,8 @@ export class HubGoals extends BasicSerializableObject {
             case enumItemProcessorTypes.cutterQuad:
             case enumItemProcessorTypes.rotater:
             case enumItemProcessorTypes.rotaterCCW:
+            case enumItemProcessorTypes.flipper:
+            case enumItemProcessorTypes.flipperHorizontal:
             case enumItemProcessorTypes.stacker: {
                 assert(
                     globalConfig.buildingSpeeds[processorType],

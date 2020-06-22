@@ -189,6 +189,36 @@ export class ItemProcessorSystem extends GameSystemWithFilter {
                 break;
             }
 
+            // FLIPPER
+            case enumItemProcessorTypes.flipper: {
+                const inputItem = /** @type {ShapeItem} */ (items[0].item);
+                assert(inputItem instanceof ShapeItem, "Input for flipper is not a shape");
+                const inputDefinition = inputItem.definition;
+
+                const flippedDefinition = this.root.shapeDefinitionMgr.shapeActionFlipVertical(
+                    inputDefinition
+                );
+                outItems.push({
+                    item: new ShapeItem(flippedDefinition),
+                });
+                break;
+            }
+
+            // FLIPPER (HORIZONTAL)
+            case enumItemProcessorTypes.flipperHorizontal: {
+                const inputItem = /** @type {ShapeItem} */ (items[0].item);
+                assert(inputItem instanceof ShapeItem, "Input for flipper is not a shape");
+                const inputDefinition = inputItem.definition;
+
+                const flippedDefinition = this.root.shapeDefinitionMgr.shapeActionFlipHorizontal(
+                    inputDefinition
+                );
+                outItems.push({
+                    item: new ShapeItem(flippedDefinition),
+                });
+                break;
+            }
+
             // STACKER
 
             case enumItemProcessorTypes.stacker: {

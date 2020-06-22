@@ -110,6 +110,42 @@ export class ShapeDefinitionManager extends BasicSerializableObject {
     }
 
     /**
+     * Generates a definition for flipping a shape vertical
+     * @param {ShapeDefinition} definition
+     * @returns {ShapeDefinition}
+     */
+    shapeActionFlipVertical(definition) {
+        const key = "flip-vertical" + definition.getHash();
+        if (this.operationCache[key]) {
+            return /** @type {ShapeDefinition} */ (this.operationCache[key]);
+        }
+
+        const flipped = definition.cloneFlipVertical();
+
+        return /** @type {ShapeDefinition} */ (this.operationCache[key] = this.registerOrReturnHandle(
+            flipped
+        ));
+    }
+
+    /**
+     * Generates a definition for flipping a shape horizontal
+     * @param {ShapeDefinition} definition
+     * @returns {ShapeDefinition}
+     */
+    shapeActionFlipHorizontal(definition) {
+        const key = "flip-horizontal" + definition.getHash();
+        if (this.operationCache[key]) {
+            return /** @type {ShapeDefinition} */ (this.operationCache[key]);
+        }
+
+        const flipped = definition.cloneFlipHorizontal();
+
+        return /** @type {ShapeDefinition} */ (this.operationCache[key] = this.registerOrReturnHandle(
+            flipped
+        ));
+    }
+
+    /**
      * Generates a definition for rotating a shape counter clockwise
      * @param {ShapeDefinition} definition
      * @returns {ShapeDefinition}
