@@ -8,6 +8,7 @@ import { MetaMinerBuilding } from "../../buildings/miner";
 import { MetaMixerBuilding } from "../../buildings/mixer";
 import { MetaPainterBuilding } from "../../buildings/painter";
 import { MetaRotaterBuilding } from "../../buildings/rotater";
+import { MetaFlipperBuilding } from "../../buildings/flipper";
 import { MetaSplitterBuilding } from "../../buildings/splitter";
 import { MetaStackerBuilding } from "../../buildings/stacker";
 import { MetaTrashBuilding } from "../../buildings/trash";
@@ -23,6 +24,7 @@ const toolbarBuildings = [
     MetaMinerBuilding,
     MetaCutterBuilding,
     MetaRotaterBuilding,
+    MetaFlipperBuilding,
     MetaStackerBuilding,
     MetaMixerBuilding,
     MetaPainterBuilding,

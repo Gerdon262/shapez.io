@@ -453,6 +453,14 @@ buildings:
             name: Merger (compact)
             description: Merges two conveyor belts into one.
 
+    flipper: # Internal name for the Flipper
+        default:
+            name: &flipper Flipper
+            description: Flips the shape horizontally
+        vertical:
+            name: Flipper vertical
+            description: Flips the shape vertically
+
     cutter:
         default:
             name: &cutter Cutter

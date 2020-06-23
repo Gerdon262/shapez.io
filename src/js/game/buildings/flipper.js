@@ -9,7 +9,7 @@ import { ItemAcceptorComponent, enumItemAcceptorItemFilter } from "../components
 import { enumDirection, Vector } from "../../core/vector";
 
 /** @enum {string} */
-export const enumFlipperVariants = { horizontal: "horizontal" };
+export const enumFlipperVariants = { vertical: "vertical" };
 
 export class MetaFlipperBuilding extends MetaBuilding {
     constructor() {
@@ -27,8 +27,8 @@ export class MetaFlipperBuilding extends MetaBuilding {
      */
     getAdditionalStatistics(root, variant) {
         const speed = root.hubGoals.getProcessorBaseSpeed(
-            variant === enumFlipperVariants.horizontal
-                ? enumItemProcessorTypes.flipperHorizontal
+            variant === enumFlipperVariants.vertical
+                ? enumItemProcessorTypes.flipperVertical
                 : enumItemProcessorTypes.flipper
         );
         return [[T.ingame.buildingPlacement.infoTexts.speed, formatItemsPerSecond(speed)]];
@@ -42,7 +42,7 @@ export class MetaFlipperBuilding extends MetaBuilding {
         // if (root.hubGoals.isRewardUnlocked(enumHubGoalRewards.reward_rotater_ccw)) {
         //     return [defaultBuildingVariant, enumRotaterVariants.ccw];
         // }
-        return [defaultBuildingVariant, enumFlipperVariants.horizontal];
+        return [defaultBuildingVariant, enumFlipperVariants.vertical];
     }
 
     /**
@@ -95,8 +95,8 @@ export class MetaFlipperBuilding extends MetaBuilding {
                 entity.components.ItemProcessor.type = enumItemProcessorTypes.flipper;
                 break;
             }
-            case enumFlipperVariants.horizontal: {
-                entity.components.ItemProcessor.type = enumItemProcessorTypes.flipperHorizontal;
+            case enumFlipperVariants.vertical: {
+                entity.components.ItemProcessor.type = enumItemProcessorTypes.flipperVertical;
                 break;
             }
             default:

@@ -343,6 +343,8 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
+            <key type="filename">sprites/blueprints/flipper.png</key>
+            <key type="filename">sprites/blueprints/flipperHorizontal.png</key>
             <key type="filename">sprites/blueprints/miner-chainable.png</key>
             <key type="filename">sprites/blueprints/miner.png</key>
             <key type="filename">sprites/blueprints/rotater-ccw.png</key>
@@ -354,6 +356,8 @@
             <key type="filename">sprites/blueprints/underground_belt_entry.png</key>
             <key type="filename">sprites/blueprints/underground_belt_exit-tier2.png</key>
             <key type="filename">sprites/blueprints/underground_belt_exit.png</key>
+            <key type="filename">sprites/buildings/flipper.png</key>
+            <key type="filename">sprites/buildings/flipperHorizontal.png</key>
             <key type="filename">sprites/buildings/miner-chainable.png</key>
             <key type="filename">sprites/buildings/rotater-ccw.png</key>
             <key type="filename">sprites/buildings/splitter-compact-inverse.png</key>
@@ -362,6 +366,7 @@
             <key type="filename">sprites/buildings/underground_belt_entry.png</key>
             <key type="filename">sprites/buildings/underground_belt_exit-tier2.png</key>
             <key type="filename">sprites/buildings/underground_belt_exit.png</key>
+            <key type="filename">sprites/flipper.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>

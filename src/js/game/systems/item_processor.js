@@ -189,13 +189,13 @@ export class ItemProcessorSystem extends GameSystemWithFilter {
                 break;
             }
 
-            // FLIPPER
+            // FLIPPER (Horizontal)
             case enumItemProcessorTypes.flipper: {
                 const inputItem = /** @type {ShapeItem} */ (items[0].item);
                 assert(inputItem instanceof ShapeItem, "Input for flipper is not a shape");
                 const inputDefinition = inputItem.definition;
 
-                const flippedDefinition = this.root.shapeDefinitionMgr.shapeActionFlipVertical(
+                const flippedDefinition = this.root.shapeDefinitionMgr.shapeActionFlipHorizontal(
                     inputDefinition
                 );
                 outItems.push({
@@ -204,13 +204,13 @@ export class ItemProcessorSystem extends GameSystemWithFilter {
                 break;
             }
 
-            // FLIPPER (HORIZONTAL)
-            case enumItemProcessorTypes.flipperHorizontal: {
+            // FLIPPER (Vertical)
+            case enumItemProcessorTypes.flipperVertical: {
                 const inputItem = /** @type {ShapeItem} */ (items[0].item);
                 assert(inputItem instanceof ShapeItem, "Input for flipper is not a shape");
                 const inputDefinition = inputItem.definition;
 
-                const flippedDefinition = this.root.shapeDefinitionMgr.shapeActionFlipHorizontal(
+                const flippedDefinition = this.root.shapeDefinitionMgr.shapeActionFlipVertical(
                     inputDefinition
                 );
                 outItems.push({

@@ -5,6 +5,7 @@ import { MetaMinerBuilding } from "./buildings/miner";
 import { MetaMixerBuilding } from "./buildings/mixer";
 import { MetaPainterBuilding } from "./buildings/painter";
 import { MetaRotaterBuilding } from "./buildings/rotater";
+import { MetaFlipperBuilding } from "./buildings/flipper";
 import { MetaSplitterBuilding } from "./buildings/splitter";
 import { MetaStackerBuilding } from "./buildings/stacker";
 import { MetaTrashBuilding } from "./buildings/trash";
@@ -16,6 +17,7 @@ export function initMetaBuildingRegistry() {
     gMetaBuildingRegistry.register(MetaMinerBuilding);
     gMetaBuildingRegistry.register(MetaCutterBuilding);
     gMetaBuildingRegistry.register(MetaRotaterBuilding);
+    gMetaBuildingRegistry.register(MetaFlipperBuilding);
     gMetaBuildingRegistry.register(MetaStackerBuilding);
     gMetaBuildingRegistry.register(MetaMixerBuilding);
     gMetaBuildingRegistry.register(MetaPainterBuilding);

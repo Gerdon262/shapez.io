@@ -491,6 +491,48 @@ export class ShapeDefinition extends BasicSerializableObject {
     }
 
     /**
+     * Returns a definition which was rotated clockwise
+     * @returns {ShapeDefinition}
+     */
+    cloneFlipVertical() {
+        const newLayers = this.internalCloneLayers();
+
+        for (let layerIndex = 0; layerIndex < newLayers.length; ++layerIndex) {
+            const quadrants = newLayers[layerIndex];
+            const temp1 = quadrants[0];
+            quadrants[0] = quadrants[1];
+            quadrants[1] = temp1;
+
+            const temp2 = quadrants[2];
+            quadrants[2] = quadrants[3];
+            quadrants[3] = temp2;
+        }
+
+        return new ShapeDefinition({ layers: newLayers });
+    }
+
+    /**
+     * Returns a definition which was rotated clockwise
+     * @returns {ShapeDefinition}
+     */
+    cloneFlipHorizontal() {
+        const newLayers = this.internalCloneLayers();
+
+        for (let layerIndex = 0; layerIndex < newLayers.length; ++layerIndex) {
+            const quadrants = newLayers[layerIndex];
+            const temp1 = quadrants[0];
+            quadrants[0] = quadrants[3];
+            quadrants[3] = temp1;
+
+            const temp2 = quadrants[1];
+            quadrants[1] = quadrants[2];
+            quadrants[2] = temp2;
+        }
+
+        return new ShapeDefinition({ layers: newLayers });
+    }
+
+    /**
      * Stacks the given shape definition on top.
      * @param {ShapeDefinition} definition
      */

@@ -4,6 +4,8 @@ export const enumColors = {
     green: "green",
     blue: "blue",
 
+    orange: "orange",
+
     yellow: "yellow",
     purple: "purple",
     cyan: "cyan",
@@ -17,6 +19,8 @@ export const enumColorToShortcode = {
     [enumColors.red]: "r",
     [enumColors.green]: "g",
     [enumColors.blue]: "b",
+
+    [enumColors.orange]: "o",
 
     [enumColors.yellow]: "y",
     [enumColors.purple]: "p",
@@ -37,6 +41,8 @@ export const enumColorsToHexCode = {
     [enumColors.red]: "#ff666a",
     [enumColors.green]: "#78ff66",
     [enumColors.blue]: "#66a7ff",
+
+    [enumColors.orange]: "#ff9800",
 
     // red + green
     [enumColors.yellow]: "#fcf52a",
@@ -61,7 +67,10 @@ export const enumColorMixingResults = {
         [c.green]: c.yellow,
         [c.blue]: c.purple,
 
-        [c.yellow]: c.yellow,
+        [c.yellow]: c.orange,
+
+        [c.orange]: c.orange,
+
         [c.purple]: c.purple,
         [c.cyan]: c.white,
 
@@ -76,6 +85,8 @@ export const enumColorMixingResults = {
         [c.purple]: c.white,
         [c.cyan]: c.cyan,
 
+        [c.orange]: c.orange,
+
         [c.white]: c.white,
     },
 
@@ -85,6 +96,8 @@ export const enumColorMixingResults = {
         [c.purple]: c.purple,
         [c.cyan]: c.cyan,
 
+        [c.orange]: c.orange,
+
         [c.white]: c.white,
     },
 
@@ -92,15 +105,24 @@ export const enumColorMixingResults = {
     [c.yellow]: {
         [c.purple]: c.white,
         [c.cyan]: c.white,
+        [c.red]: c.orange,
+
+        [c.orange]: c.orange,
     },
 
     // 255, 0, 255
     [c.purple]: {
         [c.cyan]: c.white,
+
+        [c.orange]: c.orange,
     },
 
     // 0, 255, 255
-    [c.cyan]: {},
+    [c.cyan]: {
+        [c.orange]: c.orange,
+    },
+
+    [c.orange]: {},
 
     //// SPECIAL COLORS
 

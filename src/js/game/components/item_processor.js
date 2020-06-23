@@ -12,7 +12,7 @@ export const enumItemProcessorTypes = {
     rotater: "rotater",
     rotaterCCW: "rotaterCCW",
     flipper: "flipper",
-    flipperHorizontal: "flipperHorizontal",
+    flipperVertical: "flipperVertical",
     stacker: "stacker",
     trash: "trash",
     mixer: "mixer",
